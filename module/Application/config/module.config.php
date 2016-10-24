@@ -95,10 +95,30 @@ return array(
         ),
     ),
     // Placeholder for console routes
-    'console' => array(
-        'router' => array(
-            'routes' => array(
+  
+    'router' => array(
+        'routes' => array(
+            'quem-somos' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/quem-somos',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Quemsomos',
+                        'action'     => 'index'
+                    )
+                )
             ),
+            'home' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/home',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'index'
+                    )
+                )
+            )
         ),
     ),
+  
 );
