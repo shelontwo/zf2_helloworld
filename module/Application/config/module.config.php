@@ -97,17 +97,7 @@ return array(
     // Placeholder for console routes
   
     'router' => array(
-        'routes' => array(
-            'quem-somos' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => array(
-                    'route'    => '/quem-somos',
-                    'defaults' => array(
-                        'controller' => 'Application\Controller\Quemsomos',
-                        'action'     => 'index'
-                    )
-                )
-            ),
+        'routes' => array(           
             'home' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
@@ -115,6 +105,26 @@ return array(
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'index'
+                    )
+                )
+            ),
+            'quem-somos' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/quem-somos',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'quemsomos'
+                    )
+                )
+            ),
+            'contato' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/contato',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'contato'
                     )
                 )
             )
